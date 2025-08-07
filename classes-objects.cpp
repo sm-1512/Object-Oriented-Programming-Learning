@@ -5,16 +5,30 @@ using namespace std;
 //Class is a blueprint of an object. Here teacher class defines how a particular teacher entity would look like. It would have a name, a department etc.
 //Properties and attributes are called members of a class.
 class Teacher {
+private:
+    double salary;
 public: //Access specifier: In C++, by default members are private and cannot be accessed outside the class. To make them accessible outside the class we make them public.
     //Properties or attributes
     string name;
     string dept;
     string subject;
-    string salary;
+    
 
     //methods also called member functions
     void changeDept(string newDept){
         dept = newDept;
+    }
+
+
+    //Accessing private members through public getter/setter functions is not a violation.
+    //Setter Function
+    void setSalary(double s){
+        salary = s;
+    }
+    //Encapsulation is about controlled access, not about completely locking away data.
+    //Getter Function
+    double getSalary(){
+        return salary;
     }
 };
 
@@ -24,16 +38,10 @@ int main(){
     t1.name = "John Doe";  //The members of the class can be accessed via the dot(.) property.
     t1.dept = "Information Technology";
     t1.subject = "Object Oriented Programming";
-    t1.salary = "100000";
+    //t1.salary = "100000"; This can not be used as salary has been set as private.
 
-    /* cout<<t1.name<<endl;
-    cout<<t1.dept<<endl;
-    cout<<t1.subject<<endl;
-    cout<<t1.salary<<endl; */
-
-    cout<< "Previous Department:" << t1.dept<<endl;
-    t1.changeDept("Computer Science");
-    cout<< "New Department:" << t1.dept<<endl;
+    t1.setSalary(250000);
+    cout<<t1.getSalary()<<endl;
     
     
     return 0;

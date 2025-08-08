@@ -15,6 +15,15 @@ public:
         this->subject = subject;
     }
 
+    //Copy Constructor
+    Teacher(Teacher &orgObj){
+        cout<<"This is the copy Constructor"<<endl;
+        this->name = orgObj.name;
+        this->dept = orgObj.dept;
+        this->subject = orgObj.subject;
+
+    }
+
     void getInfo(){
 
         //Both the below methods yield the same result.
@@ -32,5 +41,7 @@ public:
 
 int main(){
     Teacher t1("John Doe", "Computer Science", "C++"); //Calling parameteried constructor
-    t1.getInfo();
+    //t1.getInfo();
+    Teacher t2(t1);  //Custom copy constructor invoked. 
+    t2.getInfo(); 
 }

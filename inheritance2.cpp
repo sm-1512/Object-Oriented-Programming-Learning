@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//Single Level Inheritance
 class Person{
 public:
     string name;
@@ -15,7 +15,7 @@ class Student : public Person{
 public:
     int rollNo;
     Student(string name, int age, int rollNo): Person(name,  age){ 
-        //Since we are calling person constructor we dont give it a type
+        //Since we are calling person constructor we dont write Person(string name, int age)
         this->rollNo = rollNo;
     }
     

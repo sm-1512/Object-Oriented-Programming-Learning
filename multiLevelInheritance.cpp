@@ -1,3 +1,16 @@
+/*
+    multiLevelInheritance.cpp
+
+    This program demonstrates multi-level inheritance in C++.
+
+    Classes:
+    - Person: Base class representing a person with attributes 'name' and 'age'.
+    - Student: Derived from Person, adds 'rollNo' attribute to represent a student.
+    - gradStudent: Derived from Student, adds 'researchArea' attribute to represent a graduate student.
+
+    The main function creates an object of gradStudent, assigns values to all inherited and own attributes,
+    and prints them to the console.
+*/
 #include <iostream>
 using namespace std;
 //Multi Level Inheritance
@@ -7,9 +20,10 @@ public:
     int age;
 };
 
+// Student class inherits from Person and adds rollNo attribute
 class Student : public Person{
 public:
-    int rollNo;
+    int rollNo; // Roll number of the student
 };
 
 class gradStudent : public Student{

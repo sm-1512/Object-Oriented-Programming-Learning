@@ -1,3 +1,19 @@
+/*
+    This program demonstrates the concept of multiple inheritance in C++.
+
+    Classes:
+    - Student: Represents a student with attributes 'name' and 'rollNo'.
+    - Teacher: Represents a teacher with attributes 'subject' and 'salary'.
+    - teachingAssistant: Inherits from both Student and Teacher, combining their attributes.
+
+    In main():
+    - An object of teachingAssistant is created.
+    - Attributes from both Student and Teacher are assigned to the object.
+    - The object's details are printed to the console.
+
+    Purpose:
+    - To show how a class can inherit properties from multiple base classes in C++.
+*/
 #include <iostream>
 using namespace std;
 
